@@ -23,12 +23,9 @@ src/
 │
 ├── assets/              # Static assets
 ├── components/          # Reusable UI components
-├── composables/         # Reusable logic (hooks)
 ├── stores/              # Pinia stores
 ├── pages/               # Route views
 ├── router/              # Vue Router setup
-├── services/            # Axios client, API handlers
-├── types/               # TypeScript types/interfaces
 ├── App.vue              # Root component
 └── main.ts              # Entry point
 ```

@@ -142,7 +142,12 @@ const handleSubmit = (e) => {
           <button
             type="submit"
             class="w-full bg-primary text-white py-2 rounded-lg hover:opacity-90 transition disabled:opacity-60 flex justify-center items-center cursor-pointer"
-            :disabled="loading"
+            :disabled="
+              loading ||
+              !formData.email ||
+              !formData.password ||
+              !formData.confirm_password
+            "
           >
             <svg
               v-if="loading"

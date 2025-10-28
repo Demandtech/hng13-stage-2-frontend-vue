@@ -126,7 +126,11 @@ const handleSubmit = (e) => {
         <button
           type="submit"
           class="w-full bg-primary text-white py-2 rounded-lg hover:opacity-90 transition disabled:opacity-60 flex justify-center items-center gap-2"
-          :disabled="loginMutation.isPending.value"
+          :disabled="
+            loginMutation.isPending.value ||
+            !formData.email ||
+            !formData.password
+          "
         >
           <Loader class="w-5 h-5" v-if="loginMutation.isPending.value" />
           {{ loginMutation.isPending.value ? "Signing in..." : "Sign In" }}
