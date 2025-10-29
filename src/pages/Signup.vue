@@ -27,10 +27,6 @@ const signupMutation = useMutation({
       router.push("/dashboard");
     }, 500);
   },
-
-  // onError: (err) => {
-  //   console.error("Signup failed:", err.response?.data?.message || err.message);
-  // },
 });
 
 const handleSubmit = (e) => {
